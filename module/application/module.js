@@ -3,7 +3,7 @@ qh.setModule("application", {
 	require: [
 		//"collection",
 		//"game",
-		//"object",
+		"command",
 		"babylon",
 		"ace"
 	],

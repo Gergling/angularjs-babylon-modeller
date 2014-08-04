@@ -11,16 +11,19 @@ qh.component('ace', function(ngm, qhm) {
 				"$attrs",
 				"$element",
 				"$timeout",
-				"babylon.factory.core",
-				"babylon.factory.camera",
-				function($scope, $attrs, $element, $timeout, core, cameraRegister) {
+				"ace.factory.core",
+				function($scope, $attrs, $element, $timeout, core) {
 					$timeout(function () {
 						var editor = ace.edit("editor");
+						core.editor = editor;
 						$(editor.container).height(300);
 						editor.setTheme("ace/theme/monokai");
 						editor.getSession().setMode("ace/mode/javascript");
 						var vars = [];
-						editor.setValue("stuff // Available variables include: " + vars.join(", ") + "\n");
+						editor.setValue("// Available variables include: " + vars.join(", ") + "\n" + [
+							'var light0 = new BABYLON.PointLight("Omni", new BABYLON.Vector3(0, 0, 10), scene);',
+							'var origin = BABYLON.Mesh.CreateSphere("origin", 10, 1.0, scene);'
+						].join("\n"));
 					});
 				}
 			]

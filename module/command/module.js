@@ -1,4 +1,4 @@
-qh.setModule("ace", {
+qh.setModule("command", {
 	directive: [
 		"command"
 	]

@@ -1,7 +1,8 @@
 qh.setModule("babylon", {
 	factory: [
 		"core",
-		"camera"
+		"camera",
+		"scene-list"
 	],
 	directive: [
 		"canvas"

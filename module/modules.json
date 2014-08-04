@@ -2,6 +2,7 @@
 	"list": [
 		"application",
 		"babylon",
-		"ace"
+		"ace",
+		"command"
 	]
 }
